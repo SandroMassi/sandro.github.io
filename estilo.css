@@ -1,0 +1,30 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#contenido {
+    background-color:bisque;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    /*justify-content: space-between;*/
+    align-items: center;
+}
+.caja{
+    border: 2px solid black;
+    margin: 5px;
+    padding: 5px;
+    width: 100px;
+    height: 100px;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    background-color:darkmagenta;
+}
+.caja:nth-child(4){
+    width: 300px;
+}
+.caja:nth-child(2){
+    width: 450px;
+    background-color:greenyellow;
+}
