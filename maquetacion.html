@@ -8,37 +8,65 @@
     <link rel="stylesheet" href="maquetacion.css">
 </head>
 <body>
-    <a> <img src="logo.png"> </a>
+    <a style="position:relative;"> <img src="logo.png"> </a>
     <div class="principal">
         <nav>
             <ul>
-            <li><a href="#logo"><i class="icon-home"></i>Inicio</a></li>
-            <li><a href="#about"><i class="icon-user"></i>Sobre Nosotros</a></li>
-            <li><a href="#portfolio"><i class="icon-thumbs-up-alt"></i>Productos</a></li>
-            <li><a href="#services"><i class="icon-gear"></i>Servicios</a></li>
-            <li><a href="#gallery"><i class="icon-picture"></i>Infografias</a></li>
-            <li><a href="#contact"><i class="icon-phone"></i>Contactanos</a></li>
+            <li><a href="#logo"><i class="icon-home"></i></a></li>
+            <li><a href="#about"><i class="icon-user"></i>Inicio</a></li>
+            <li><a href="#productos"><i class="icon-thumbs-up-alt"></i>Productos</a></li>
+            <li><a href="#sucursales"><i class="icon-gear"></i>Sucursales</a></li>
+            <li><a href="#soporte"><i class="icon-picture"></i>Soporte</a></li>
+            <li><a href="#contactenos"><i class="icon-phone"></i>Contactanos</a></li>
             </ul>
             </nav>
-        <figure>
-            <figcaption> Ejemplo1</figcaption>
+            <figure>
+                <figcaption> <h2> Conversor de divisas </h2>
+                    <script src="funciones.js"></script>
+                    Cantidad: <input type="text" id="cantidad" value="0"
+                    onchange="convertir()">
+                    <span id="valor"></span><br>
+                    Convertir De:
+                    <select id="de" onchange="convertir()">
+                        <option value="1">Bolivianos</option>
+                        <option value="2">Dolar</option>
+                        <option value="3">Euro</option>
+                    </select> <br><br>
+                    Convertir A:
+                    <select id="a" onchange="convertir()">
+                        <option value="1">Bolivianos</option>
+                        <option value="2">Dolar</option>
+                        <option value="3">Euro</option>
+                    </select> <br><br>
+                    <h2 id="resultado"> Resultado: $0.00</h2>
+            </figcaption>
             
         </figure>
         <figure2>
-            <figcaption> Ejemplo2</figcaption>
+            <figcaption>    
+                <label for="nombre" class="colocar_nombre"><h2>Inicie Sesion</h2>
+                    <br>
+                  <span class="obligatorio"></span>
+                 </label>
+               <input class="controls" type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre completo">
+               <br> <br> 
+               <button onclick="mensaje()"><p>Ingresar</p></button>
+               <p><a href=""> Vuelve a intentar</a></p>
+            
+            </figcaption>
         </figure2>
         <main>
             <section>
                 <article> <div class="formulario">      
                     <h1>Formulario de contacto</h1>
-                      <h3>Escríbenos y en breve los pondremos en contacto contigo</h3>
+                      <h3>Escríbenos y en breve nos comunicamos con ud</h3>
               
               
                         <form action="submeter-formulario.php" method="post">       
               
                           
                               <p>
-                                <label for="nombre" class="colocar_nombre">Nombre
+                                <label for="nombre" class="colocar_nombre">Nombre y apellido
                                   <span class="obligatorio">*</span>
                                 </label>
                                   <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
@@ -50,24 +78,10 @@
                                 </label>
                                   <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email">
                               </p>
-                          
-                              <p>
-                                <label for="telefone" class="colocar_telefono">Teléfono
-                                </label>
-                                  <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
-                              </p>    
-                            
-                              <p>
-                                <label for="website" class="colocar_website">Sitio web
-                                </label>
-                                  <input type="url" name="introducir_website" id="website" placeholder="Escribe la URL de tu web">
-                              </p>    
-                            
-                              <p>
-                                <label for="asunto" class="colocar_asunto">Asunto
-                                  <span class="obligatorio">*</span>
-                                </label>
-                                  <input type="text" name="introducir_asunto" id="assunto" required="obligatorio" placeholder="Escribe un asunto">
+                        
+                                  <span class="obligatorio"></span>
+                                
+                                  <input type="text" name="introducir_numero" id="assunto" required="obligatorio" placeholder="Escribe un numero">
                               </p>    
                             
                               <p>
@@ -89,11 +103,32 @@
             </section>
         </main>
         <footer>
-            <div class="caja"> 1 </div>
-            <div class="caja"> 2 </div>
-            <div class="caja"> 3 </div>
-            <div class="caja"> 4 </div>
+            <footer class="site-footer">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                    <a style="position:relative;">................................................................................................................... <img src="logo.png"></a>
+                        <br><br><br>
+                      <h6>Sobre Nosotros</h6>
+                      <p class="text-justify"> <i>Onecompany es una empresa boliviana, que se dedica a la importación y comercialización de componentes y accesorios de computación, de las mejores marcas del mundo. Somos un equipo de personas apasionados por el trabajo cuyo objetivo es satisfacer las necesidades de los clientes. </i> </p>
+                    </div>
+          
+                    <div class="col-xs-6 col-md-3">
+                      <h6>Politicas de la empresa</h6>
+                      <ul class="footer-links">
+                        <li><a href="http://scanfcode.com/about/">Sobre Nosotros</a></li>
+                        <li><a href="http://scanfcode.com/contact/">Comunidad</a></li>
+                        <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Apoyo</a></li>
+                        <li><a href="http://scanfcode.com/privacy-policy/">Oficina central</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <hr>
+                </div>
+                </div>
+          </footer>
         </footer>
+        
     </div>
 </body>
 </html>
